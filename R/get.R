@@ -70,7 +70,7 @@ sc_get <- function(sccall, api_key) {
     if (init[['metadata']][['total']] > nrow(init[['results']])) {
 
         ## get number of pages needed
-        pages <- ceiling(init[['metadata']][['total']] / 100)
+        pages <- floor(init[['metadata']][['total']] / 100)
 
         message('Large request will require: ' %+% pages %+% ' additional pulls.')
 
