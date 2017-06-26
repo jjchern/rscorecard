@@ -1,3 +1,18 @@
+
+# About
+
+The goal of the current branch `feat` is to add a few new features:
+
+- Export the `rscorecard::dict` file.
+
+Install the `feat` version with
+
+```r
+devtools::install_github('jjchern/rscorecard', ref = "feat")
+```
+
+Below is the original readme from [`btskinner`](https://github.com/btskinner).
+
 # rscorecard
 
 [![Build Status](https://travis-ci.org/btskinner/rscorecard.svg?branch=master)](https://travis-ci.org/btskinner/rscorecard)
