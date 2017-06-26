@@ -9,7 +9,7 @@ link <- paste0('https://collegescorecard.ed.gov/assets/', file)
 download.file(link, file)
 
 ## create dictionary
-df <- read_excel(file, sheet = 3) %>%
+df <- read_excel(file, sheet = 4) %>%
     ## lower names
     setNames(tolower(names(.))) %>%
     ## subset/rename
