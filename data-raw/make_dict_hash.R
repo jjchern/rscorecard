@@ -18,7 +18,8 @@ df <- read_excel(file, sheet = 4) %>%
            dev_friendly_name = `developer-friendly name`,
            varname = `variable name`,
            value,
-           label) %>%
+           label,
+           source) %>%
     ## lower name values for varname column
     mutate(varname = tolower(varname)) %>%
     ## remove extra \r\n from decription column
@@ -27,7 +28,8 @@ df <- read_excel(file, sheet = 4) %>%
     mutate(description = na.locf(description),
            dev_category = na.locf(dev_category),
            dev_friendly_name = na.locf(dev_friendly_name),
-           varname = na.locf(varname))
+           varname = na.locf(varname),
+           source = na.locf(source))
 
 dict <- df %>% data.frame(.)
 
