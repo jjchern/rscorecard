@@ -2,4 +2,4 @@
 #' 
 #' @source
 #' \url{"https://collegescorecard.ed.gov/assets/CollegeScorecardDataDictionary.xlsx"}
-"dict"
+"sc_dict_df"

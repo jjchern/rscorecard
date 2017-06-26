@@ -32,6 +32,7 @@ df <- read_excel(file, sheet = 4) %>%
            source = na.locf(source))
 
 dict <- df %>% data.frame(.)
+sc_dict_df <- df
 
 ## create hash environment for quick conversion between varnames
 ## and developer-friendly names
@@ -74,7 +75,7 @@ for(i in 1:nrow(tmp)) {
 
 ## save to sysdata.R
 devtools::use_data(dict, sc_hash, pkg = '..', overwrite = TRUE, internal = TRUE)
-devtools::use_data(dict, overwrite = TRUE)
+devtools::use_data(sc_dict_df, overwrite = TRUE)
 
 
 
