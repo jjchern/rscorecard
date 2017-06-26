@@ -4,9 +4,9 @@ libs <- c('dplyr','readxl', 'zoo')
 lapply(libs, require, character.only = TRUE)
 
 ## get latest XLSX data dictionary file
-file <- 'CollegeScorecardDataDictionary.xlsx'
-link <- paste0('https://collegescorecard.ed.gov/assets/', file)
-download.file(link, file)
+file <- 'data-raw/CollegeScorecardDataDictionary.xlsx'
+link <- paste0('https://collegescorecard.ed.gov/assets/', basename(file))
+if (!file.exists(file)) download.file(link, file)
 
 ## create dictionary
 df <- read_excel(file, sheet = 4) %>%
