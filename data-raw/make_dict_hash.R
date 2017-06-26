@@ -74,7 +74,7 @@ for(i in 1:nrow(tmp)) {
 
 ## save to sysdata.R
 devtools::use_data(dict, sc_hash, pkg = '..', overwrite = TRUE, internal = TRUE)
-
+devtools::use_data(dict, overwrite = TRUE)
 
 
 
