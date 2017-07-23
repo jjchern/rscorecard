@@ -26,4 +26,3 @@ sc_filter(control == 1:2) # same as above
 sc_filter(stabbr == 'TN', control == 1, locale == 41:43) # TN rural publics
 }
 }
-

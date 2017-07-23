@@ -25,6 +25,7 @@ that is used to get the data.
 
 To obtain an API key, visit \url{https://api.data.gov/signup}
 }
+
 \examples{
 \dontrun{
 sc_get('<API KEY IN STRING>')
@@ -33,4 +34,3 @@ sc_get(key)
 }
 
 }
-

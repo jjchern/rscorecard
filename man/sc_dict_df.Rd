@@ -15,4 +15,3 @@ sc_dict_df
 Scorecard data dictionary
 }
 \keyword{datasets}
-

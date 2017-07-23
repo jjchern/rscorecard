@@ -37,4 +37,3 @@ sc_dict('state')
 sc_dict('^st', search_col = 'varname') # variable names starting with 'st'
 sc_dict('.', limit = Inf) # return full dictionary (not recommended)
 }
-

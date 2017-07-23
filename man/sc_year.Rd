@@ -30,10 +30,10 @@ Be sure to check with the College Scorecard
 \href{https://collegescorecard.ed.gov/assets/FullDataDocumentation.pdf}{data
 documentation report} when choosing the year.
 }
+
 \examples{
 \dontrun{
 sc_year()
 sc_year(2012)
 }
 }
-

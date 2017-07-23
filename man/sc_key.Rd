@@ -20,10 +20,10 @@ If you set your key using \code{sc_key}, then you may omit
 
 To obtain an API key, visit \url{https://api.data.gov/signup}.
 }
+
 \examples{
 \dontrun{
 sc_key('<API KEY IN STRING>')
 }
 
 }
-

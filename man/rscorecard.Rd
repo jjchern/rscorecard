@@ -22,4 +22,3 @@ All command pipes must start with \code{sc_init()}, end with
 \code{\link{sc_zip}}, can come in any order in the pipe chain. Only
 \code{\link{sc_select}} is required.
 }
-

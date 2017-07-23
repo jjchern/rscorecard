@@ -22,4 +22,3 @@ sc_select(UNITID, INSTNM)
 sc_select(unitid, instnm)
 }
 }
-

@@ -59,7 +59,11 @@ sc_get <- function(sccall, api_key) {
 
     ## first GET
     con <- url %+% '&_page=0&_per_page=100&api_key=' %+% api_key
-    init <- p_fromJSON(con)
+    init <- persistently(fromJSON(con),
+                otherwise = NA_character_,
+                quiet = FALSE,
+                max_attempts = 10,
+                wait_seconds = 3)
 
     ## return if no options
     if (init[['metadata']][['total']] == 0) {
@@ -79,7 +83,11 @@ sc_get <- function(sccall, api_key) {
         for (i in 1:pages) {
             message('Request chunk ' %+% i)
             con <- url %+% '&_page=' %+% i %+% '&_per_page=100&api_key=' %+% api_key
-            page_list[[i]] <- p_fromJSON(con)[['results']]
+            page_list[[i]] <- persistently(fromJSON(con),
+                                           otherwise = NA_character_,
+                                           quiet = FALSE,
+                                           max_attempts = 10,
+                                           wait_seconds = 3)[['results']]
         }
 
         df <- dplyr::bind_rows(dplyr::tbl_df(init[['results']]), page_list)

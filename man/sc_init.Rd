@@ -20,4 +20,3 @@ sc_init()
 sc_init(dfvars = TRUE)
 }
 }
-

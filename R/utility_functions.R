@@ -4,7 +4,7 @@ magrittr::`%>%`
 
 #' @importFrom jsonlite fromJSON
 #' @importFrom dplyr filter_
-#' @importFrom as_function purrr
+#' @importFrom purrr as_function
 #' @export
 dplyr::filter_
 #' @importFrom lazyeval interp
@@ -62,10 +62,3 @@ persistently <- function(.f, otherwise = NULL, quiet = TRUE, max_attempts = 5, w
         otherwise
     }
 }
-
-## Build a persistent fromJSON
-persistently(jsonlite::fromJSON,
-             otherwise = NA_character_,
-             quiet = FALSE,
-             max_attempts = 10,
-             wait_seconds = 3) -> p_fromJSON
