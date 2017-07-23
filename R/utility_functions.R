@@ -4,6 +4,7 @@ magrittr::`%>%`
 
 #' @importFrom jsonlite fromJSON
 #' @importFrom dplyr filter_
+#' @importFrom as_function purrr
 #' @export
 dplyr::filter_
 #' @importFrom lazyeval interp
