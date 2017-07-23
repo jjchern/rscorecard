@@ -63,7 +63,7 @@ persistently <- function(.f, otherwise = NULL, quiet = TRUE, max_attempts = 5, w
 }
 
 ## Build a persistent fromJSON
-persistently(fromJSON,
+persistently(jsonlite::fromJSON,
              otherwise = NA_character_,
              quiet = FALSE,
              max_attempts = 10,
